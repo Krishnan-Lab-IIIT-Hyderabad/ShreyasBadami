@@ -15,7 +15,7 @@ def minimisation(sim,particles):
             sim.PE[i] = peSys(X)
             if(sim.PE[i] > sim.PE[i-1]):
                 return i,sim.PE[i-1],X
-            X += sim.timeStep*V + 0.5*sim.timeStep*sim.timeStep*a1
+            X += sim.timeStep*a1
             a2 = np.zeros((particles.n,particles.dim))
             for l in X:
                 a2 -= F(X-l)
