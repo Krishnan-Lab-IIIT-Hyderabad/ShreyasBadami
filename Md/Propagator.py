@@ -14,9 +14,9 @@ class Propagator:
         self.H = np.zeros(numSteps)
         self.KE = np.zeros(numSteps)
         self.PE = np.zeros(numSteps)
-        self.sigma = 5
-        self.nu = 5
-        self.ke_T = 5
+        self.sigma = 10
+        self.nu = 7
+        self.ke_T = 500
 
     def velocityVerlet(self,particles,thermostat):
         a1 = np.zeros((particles.n,particles.dim))

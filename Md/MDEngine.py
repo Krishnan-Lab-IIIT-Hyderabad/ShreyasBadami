@@ -7,9 +7,9 @@ from Minimisation import minimisation
 
 
 
-particles = System.createSystem(1000,10,3)
-sim = Propagator.createSim(100, 0.001)
-sim.velocityVerlet(particles, NoThermostat)
+particles = System.createSystem(10,10,3)
+sim = Propagator.createSim(10000, 0.01)
+sim.velocityVerlet(particles, VelocityRescale)
 '''
 i, pe, X = minimisation(sim, particles)
 print(i)

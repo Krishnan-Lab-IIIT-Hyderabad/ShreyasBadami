@@ -10,7 +10,6 @@ def Anderson(V,t,sigma,nu,ke_T,dim):
 def VelocityRescale(V,t,sigma,nu,ke_T,dim):
     vScale = np.sqrt(ke_T/keSys(V))
     V *= vScale
-    V -= np.mean(V)
 
 def NoThermostat(V,t,sigma,nu,ke_T,dim):
     return None
